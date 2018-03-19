@@ -1,0 +1,44 @@
+/*
+This method helps in sending information from angular page to backend as a post request. Note all the features do not work accurately, only the posting works, the working after posting is still not figured out
+*/
+
+
+app.controller('postserviceCtrl', function ($scope, $http, $location,$window) {
+   
+    $scope.postdata = function (project_name) {
+        console.log(project_name);
+        data = { 'project_name': project_name }
+
+        console.log("It reached this ch3ckpoint");
+        $http.defaults.headers.post['X-CSRFToken'] = get_cookie();
+        $http.post('/project_creation/', JSON.stringify(data)).then(function (response) {
+            a = response.data;
+
+            console.log("the data i recieved :");
+            console.log(response.data);
+
+            
+            
+            $window.location="/home/#!/projects";
+        });
+    };
+
+
+
+    $scope.deleteProject=function(project_id){
+        data={"project_id":project_id};
+        $http.defaults.headers.post['X-CSRFToken']=get_cookie();
+        $http.post("/delete_project",JSON.stringify(data)).then(function(response){
+        $scope.contents=$scope.contents+"<br>"+project_id+"deleted";
+           
+        });
+    };
+
+    $scope.changePage=function(){
+        $http.get("/home/connection_protocols").then(function(response){
+            console.log(response);
+        });
+
+        
+    };
+});
