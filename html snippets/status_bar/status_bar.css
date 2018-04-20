@@ -1,0 +1,53 @@
+ 
+            #question {
+                color:darkgrey;
+                border:0px;
+            }
+            .vacate{clear:both;}
+            
+            #ask{
+                float:right;
+                margin-right:20px;
+ 
+             }
+             .questionBox{
+                width:fit-content;
+                border-radius:5px;
+                height:20%;
+                border:0px;
+                background-color:white;
+                box-shadow: 2px 2px 5px gray;
+                margin:auto;
+                padding:10px;
+                padding-left:20px;
+                padding-right:20px;
+                color:darkgrey;
+                overflow:hidden;
+                
+            }
+            
+            .questionBox select{
+                border-radius:3px;
+                color:darkgrey;
+                border:0px;}
+            .questionBox option{
+                     color:darkgray;
+                    padding:50px;
+                }
+
+            
+                .questionBox{
+                    width:fit-content;
+                    border-radius:5px;
+                    height:20%;
+                    border:0px;
+                    background-color:white;
+                    box-shadow: 2px 2px 5px gray;
+                    margin:auto;
+                    padding:10px;
+                    padding-left:20px;
+                    padding-right:20px;
+                    color:darkgrey;
+                    overflow:hidden;
+                    
+                }
